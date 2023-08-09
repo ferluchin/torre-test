@@ -5,5 +5,5 @@
 # Puedes modificar el comando de compilación y el directorio de publicación según tus necesidades
 command = "npm run build"
 publish = "build/"
-enviroment = { CI = "false" }
+environment = { CI = "false" }
 # Configuraciones adicionales, como redireccionamientos, encabezados personalizados, etc., pueden ir aquí.

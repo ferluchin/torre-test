@@ -35,9 +35,11 @@ const UserProfile = () => {
                         <h3>Stats 📊</h3>
                         <p>
                             <strong>Jobs 💼 :</strong> {data?.stats?.jobs}
-                            <strong> Education 🎓 :</strong>{"  "}
+                            <strong> Education 🎓 :</strong>
+                            {"  "}
                             {data?.stats?.education}
-                            <strong> Strengths 💪 :</strong>{"  "}
+                            <strong> Strengths 💪 :</strong>
+                            {"  "}
                             {data?.stats?.strengths}
                         </p>
 
