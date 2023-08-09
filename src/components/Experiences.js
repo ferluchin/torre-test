@@ -46,12 +46,36 @@ const renderExperiences = (experiences) => {
                     </div>
                 </div>
             ))}
-            <h4>Responsibilities:</h4>
-            <ul>
-                {experience.responsibilities.map((responsibility, resIndex) => (
-                    <li key={resIndex}>{responsibility}</li>
-                ))}
-            </ul>
+            {experience.responsibilities &&
+            experience.responsibilities.length > 0 ? (
+                <>
+                    <h4>Responsibilities:</h4>
+                    <ul>
+                        {experience.responsibilities.map(
+                            (responsibility, resIndex) => (
+                                <li key={resIndex}>{responsibility}</li>
+                            )
+                        )}
+                    </ul>
+                </>
+            ) : experience.category === "education" ? (
+                <>
+                    {experience.additionalInfo ? (
+                        <>
+                            <h4>Additional Information:</h4>
+                            <p>{experience.additionalInfo}</p>
+                        </>
+                    ) : null}
+                    <p>
+                        {experience.remote
+                            ? "Remote Education"
+                            : "On-site Education"}
+                    </p>
+                </>
+            ) : (
+                <p>No responsibilities available for this job experience.</p>
+            )}
+
             <p>
                 From: {experience.fromMonth} {experience.fromYear} to
                 {experience.toMonth
