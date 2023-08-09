@@ -1,6 +1,7 @@
 //filename: UserProfile.js
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
+import Experiences from "./Experiences";
 
 import "./UserProfile.css";
 
@@ -30,6 +31,7 @@ const UserProfile = () => {
                     <div className="UserDetails">
                         <h2>{data?.person?.name}</h2>
                         <p>{data?.person?.bio}</p>
+                        <Experiences data={data} />
 
                         <h3>Stats</h3>
                         <p>
@@ -42,11 +44,9 @@ const UserProfile = () => {
                             <strong>Strengths:</strong> {data?.stats?.strengths}
                         </p>
 
-                        {/* Add more fields from the data object as required. */}
+                        {/* morefields if required. */}
                     </div>
-                    <div className="showMoreButton">
-                        {/* Icon or Button to show more */}
-                    </div>
+                    <div className="showMoreButton"></div>
                 </div>
             )}
         </div>

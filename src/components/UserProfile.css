@@ -26,10 +26,10 @@
     align-self: center;
     display: flex;
     flex-direction: column;
-    /* Keeping details in a columnar fashion. */
+
 }
 
-/* If you have any button to show more info or navigate somewhere. */
+
 .showMoreButton {
     position: fixed;
     bottom: 0;
@@ -63,6 +63,6 @@
 
     .showMoreButton {
         display: none;
-        /* Hiding the showMoreButton on larger screens. */
+       
     }
 }
