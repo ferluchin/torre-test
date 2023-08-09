@@ -31,18 +31,17 @@ const UserProfile = () => {
                     <div className="UserDetails">
                         <h2>{data?.person?.name}</h2>
                         <p>{data?.person?.bio}</p>
-                        <Experiences data={data} />
 
-                        <h3>Stats</h3>
+                        <h3>Stats 📊</h3>
                         <p>
-                            <strong>Jobs:</strong> {data?.stats?.jobs}
+                            <strong>Jobs 💼 :</strong> {data?.stats?.jobs}
+                            <strong> Education 🎓 :</strong>{"  "}
+                            {data?.stats?.education}
+                            <strong> Strengths 💪 :</strong>{"  "}
+                            {data?.stats?.strengths}
                         </p>
-                        <p>
-                            <strong>Education:</strong> {data?.stats?.education}
-                        </p>
-                        <p>
-                            <strong>Strengths:</strong> {data?.stats?.strengths}
-                        </p>
+
+                        <Experiences data={data} />
 
                         {/* morefields if required. */}
                     </div>

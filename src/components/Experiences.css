@@ -49,27 +49,8 @@ body {
     /* Ocupa todo el ancho para que pueda centrarse */
 }
 
-.experiences>section>.experience {
-    margin: 0.5rem 0;
-    /* Ajuste de margen */
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    box-sizing: border-box;
-    flex: 0 0 calc(50% - 1rem);
-    /* 2 por fila, puedes cambiar el 50% a 33.33% para 3 por fila, etc. */
-}
-
 .experience:last-child {
     margin-bottom: 0;
-}
-
-.experience>div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* Alineación a la izquierda */
-    gap: 0.5rem;
 }
 
 .experience img {
@@ -98,17 +79,58 @@ body {
 .experience ul {
     margin: 0.5rem 0;
     padding-left: 1.5rem;
-    /* Espacio adicional para la lista */
     list-style-type: square;
-    /* Estilo de los list items */
     text-align: left;
-    /* Alineación a la izquierda para los list items */
 }
 
 .experience p {
     font-size: 1rem;
     color: #fff;
     /* Establecer color de texto en blanco */
+}
+
+.organization {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    /* Espacio entre la imagen y el nombre de la empresa */
+}
+
+.organization img {
+    flex-shrink: 0;
+    /* Asegura que la imagen no cambie de tamaño */
+}
+
+.organization-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.organization-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.organization-info h3,
+.organization-name {
+    font-weight: bold;
+    /* Texto en negrita */
+}
+
+.organization-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
 }
 
 /* Para pantallas más grandes */
@@ -124,9 +146,11 @@ body {
         flex: 0 0 calc(50% - 1rem);
         /* En pantallas grandes, cada sección toma el 50% del ancho (menos un pequeño margen) */
     }
+}
 
+@media only screen and (min-width: 1024px) {
     .experience {
-        flex: 0 0 calc(50% - 1rem);
-        /* Las tarjetas ocupan la mitad del ancho en pantallas más grandes */
+        flex: 0 0 calc(100% - 1rem);
+        /* Las tarjetas ocupan el 100% del ancho de su contenedor en pantallas grandes */
     }
 }
