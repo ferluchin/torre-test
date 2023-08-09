@@ -1,50 +1,96 @@
-/* Experience Wrapper */
+/* Filename: Experiences.css */
+
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #fff;
+    /* Establecer color de texto predeterminado en blanco */
+}
+
 .experiences {
-    margin: 2rem 0;
-    padding: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    /* En dispositivos pequeños, las secciones se apilan verticalmente */
+    gap: 1rem;
 }
 
-/* Heading */
-.experiences h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+.work-experiences,
+.education-experiences {
+    width: 100%;
+    /* En dispositivos pequeños, las secciones toman el ancho completo */
 }
 
-/* Single Experience */
 .experience {
-    margin-bottom: 1.5rem;
+    margin: 0.5rem 0;
     padding: 1rem;
-    border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.1);
-    /* Slight background for visual separation */
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    /* Las tarjetas ocupan el ancho completo en dispositivos pequeños */
+}
+
+.experiences>section {
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.experiences>section>h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
+    /* Ocupa todo el ancho para que pueda centrarse */
+}
+
+.experiences>section>.experience {
+    margin: 0.5rem 0;
+    /* Ajuste de margen */
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+    flex: 0 0 calc(50% - 1rem);
+    /* 2 por fila, puedes cambiar el 50% a 33.33% para 3 por fila, etc. */
 }
 
 .experience:last-child {
     margin-bottom: 0;
-    /* Remove margin for the last experience */
 }
 
-/* Experience Organization */
 .experience>div {
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alineación a la izquierda */
+    gap: 0.5rem;
 }
 
-/* Organization Image */
 .experience img {
-    width: 50px;
-    /* Reduced size for images */
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    /* Making the image circular */
     object-fit: cover;
-    /* Ensuring the image covers the entire space */
+    background-color: #fff;
 }
 
-/* Responsibilities */
+.placeholderIcon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
 .experience h4 {
     margin-top: 1rem;
 }
@@ -52,12 +98,35 @@
 .experience ul {
     margin: 0.5rem 0;
     padding-left: 1.5rem;
-    /* Indentation for the bullet points */
+    /* Espacio adicional para la lista */
+    list-style-type: square;
+    /* Estilo de los list items */
+    text-align: left;
+    /* Alineación a la izquierda para los list items */
 }
 
-/* Dates */
 .experience p {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.8);
-    /* Slightly dimmed for hierarchy */
+    font-size: 1rem;
+    color: #fff;
+    /* Establecer color de texto en blanco */
+}
+
+/* Para pantallas más grandes */
+@media only screen and (min-width: 768px) {
+    .experiences {
+        flex-direction: row;
+        /* Las secciones se alinean horizontalmente en pantallas más grandes */
+        justify-content: space-between;
+    }
+
+    .work-experiences,
+    .education-experiences {
+        flex: 0 0 calc(50% - 1rem);
+        /* En pantallas grandes, cada sección toma el 50% del ancho (menos un pequeño margen) */
+    }
+
+    .experience {
+        flex: 0 0 calc(50% - 1rem);
+        /* Las tarjetas ocupan la mitad del ancho en pantallas más grandes */
+    }
 }

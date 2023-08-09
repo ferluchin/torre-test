@@ -1,0 +1,9 @@
+# netlify.toml
+
+[build]
+# Esto asume que estás usando create-react-app
+# Puedes modificar el comando de compilación y el directorio de publicación según tus necesidades
+command = "npm run build"
+publish = "build/"
+enviroment = { CI = "false" }
+# Configuraciones adicionales, como redireccionamientos, encabezados personalizados, etc., pueden ir aquí.

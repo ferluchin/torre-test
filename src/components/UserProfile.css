@@ -5,64 +5,47 @@
     --bg-dark: #27292d;
 }
 
-/* The main wrapper for the profile. */
 .userProfile {
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     flex-direction: column;
     background-color: var(--bg-dark);
-    /* To give it a dark theme feel. */
     color: #fff;
-    /* White color for better contrast on dark background. */
 }
 
-/* Detailed information about the user. */
 .userDetails {
-    margin: 2rem 1.3rem;
-    gap: 2rem;
-    align-items: center;
-    max-width: 1000px;
-    align-self: center;
+    margin: 1rem;
+    gap: 1rem;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
 }
 
-
 .showMoreButton {
-    position: fixed;
-    bottom: 0;
     border: none;
     width: 100%;
-    height: 10%;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--bg-dark));
+    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-/* Styling for the icon inside the showMoreButton. */
 .showMoreButton path {
     color: var(--yellow);
 }
 
-/* Responsive design: On wider screens, adapt the layout. */
+/* For larger screens */
 @media only screen and (min-width: 768px) {
-    .userProfile {
-        overflow: auto;
-    }
-
     .userDetails {
-        display: flex;
+        margin: 2rem;
         flex-direction: row;
         justify-content: space-between;
-        margin: 2rem 3rem;
         align-items: flex-start;
     }
 
     .showMoreButton {
         display: none;
-       
     }
 }
