@@ -1,3 +1,4 @@
+// filename: NavBar.js
 import "./NavBar.css";
 import { useState, useEffect, useContext } from "react";
 import { AppContext } from "../context/AppContext";
@@ -7,8 +8,15 @@ import PropTypes from "prop-types";
 
 const NavBar = ({ setLoading }) => {
     const [search, setSearch] = useState(false);
+    const [inputValue, setInputValue] = useState("");
     const [newUser, setNewUser] = useState("");
     const { fetchData } = useContext(AppContext);
+
+    const handleSearch = () => {
+        if (inputValue === "") return; // No hacer nada si el input está vacío
+        setNewUser(inputValue); // Establecer el valor de newUser para la búsqueda
+        setSearch(false); // Cerrar la búsqueda
+    }
 
     useEffect(() => {
         if (newUser === "") return; // Skip fetching if no user name is provided
@@ -53,21 +61,21 @@ const NavBar = ({ setLoading }) => {
                         className="search"
                         type="text"
                         placeholder="New user"
-                        onChange={(e) => setNewUser(e.target.value)}
-                        value={newUser}
+                        onChange={(e) => setInputValue(e.target.value)}
+                        value={inputValue}
                     />
                     <ul className="searchButtons">
                         <FontAwesomeIcon
                             className="cursor"
                             aria-label="Search"
-                            onClick={() => setSearch(false)}
+                            onClick={handleSearch} // Usar handleSearch al hacer clic
                             icon={faSearch}
                         />
                         <FontAwesomeIcon
                             className="cursor"
                             aria-label="Close search"
                             onClick={() => {
-                                setNewUser("");
+                                setInputValue(""); // Resetear el input
                                 setSearch(false);
                             }}
                             icon={faClose}

@@ -9,7 +9,7 @@ import "./UserProfile.css";
 const UserProfile = () => {
     const { data, fetchData } = useContext(AppContext);
     const [loading, setLoading] = useState(true);
-
+/*
     useEffect(() => {
         fetchData("lgrandab")
             .then(() => {
@@ -20,7 +20,7 @@ const UserProfile = () => {
                 setLoading(false);
             });
     }, [fetchData]);
-
+*/
     return (
         <div className="userProfile">
             <NavBar setLoading={setLoading} />
