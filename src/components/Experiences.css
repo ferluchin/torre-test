@@ -105,7 +105,6 @@ body {
 
 .organization img {
     flex-shrink: 0;
-    /* Asegura que la imagen no cambie de tamaño */
 }
 
 .organization-info {

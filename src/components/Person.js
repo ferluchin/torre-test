@@ -35,7 +35,6 @@ const Person = () => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
-                                  
                                     {link.name.toLowerCase() === "github" ? (
                                         <i className="fa fa-github"></i>
                                     ) : link.name.toLowerCase() ===

@@ -2,7 +2,6 @@
     gap: 1rem;
     width: 90%;
     margin: 0 auto;
-    /* Centrar el contenedor en la página */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -27,7 +26,6 @@
     gap: 0.5rem;
     padding: 1.4rem 0;
     list-style: none;
-    /* Para quitar los puntos de la lista */
 }
 
 .userTechnologies li {
@@ -42,11 +40,9 @@
     padding: 0.5rem 1rem;
     border-radius: 1rem;
     transition: all 0.3s ease;
-    /* Hace que el cambio de color al pasar el mouse sea más suave */
     font-weight: 400;
     /* Peso regular para Roboto */
     color: #ffffff;
-    /* Blanco, para mejor contraste con el fondo oscuro */
 }
 
 .userTechnologies li button:hover {
@@ -56,5 +52,4 @@
     color: #ffffff;
     /* Blanco */
     font-weight: 700;
-    /* Peso bold para Roboto al pasar el mouse */
 }
