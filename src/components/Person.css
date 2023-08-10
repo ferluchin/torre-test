@@ -20,7 +20,7 @@
 
 /* Estilos para el perfil de la persona */
 .person-profile {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
