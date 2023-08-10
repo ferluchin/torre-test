@@ -1,0 +1,60 @@
+.userSkills {
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    /* Centrar el contenedor en la página */
+    font-family: 'Roboto', sans-serif;
+}
+
+.level {
+    color: #6c757d;
+    /* Un tono de gris */
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* Peso medio para Roboto */
+    margin-top: 1rem;
+}
+
+.icons {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    /* Espaciado entre el ícono y el texto */
+}
+
+.userTechnologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.4rem 0;
+    list-style: none;
+    /* Para quitar los puntos de la lista */
+}
+
+.userTechnologies li {
+    display: inline-block;
+}
+
+.userTechnologies li button {
+    background: none;
+    border: none;
+    background-color: #373B40;
+    /* Color de las burbujas */
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    /* Hace que el cambio de color al pasar el mouse sea más suave */
+    font-weight: 400;
+    /* Peso regular para Roboto */
+    color: #ffffff;
+    /* Blanco, para mejor contraste con el fondo oscuro */
+}
+
+.userTechnologies li button:hover {
+    cursor: pointer;
+    background-color: #949596;
+    /* Color al hacer hover */
+    color: #ffffff;
+    /* Blanco */
+    font-weight: 700;
+    /* Peso bold para Roboto al pasar el mouse */
+}

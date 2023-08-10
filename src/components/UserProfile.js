@@ -1,4 +1,3 @@
-//filename: UserProfile.js
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import Experiences from "./Experiences";
@@ -12,20 +11,17 @@ const UserProfile = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setLoading(true);
         fetchData("lgrandab")
-            .then((response) => {
-                console.log("Fetched data:", response); // Add this line
+            .then(() => {
                 setLoading(false);
             })
             .catch((error) => {
                 console.error("Error fetching data:", error);
                 setLoading(false);
             });
-    }, []);
+    }, [fetchData]);
 
     return (
-        
         <div className="userProfile">
             <NavBar setLoading={setLoading} />
 
@@ -34,7 +30,6 @@ const UserProfile = () => {
             ) : (
                 <div className="userProfileContainer">
                     <div className="UserProfile">
-                        {/* <div className="UserDetails"> */}
                         <div
                             className="UserDetails"
                             style={{
@@ -50,16 +45,13 @@ const UserProfile = () => {
                             <p>
                                 <strong>Jobs 💼 :</strong> {data?.stats?.jobs}
                                 <strong> Education 🎓 :</strong>
-                                {"  "}
                                 {data?.stats?.education}
                                 <strong> Strengths 💪 :</strong>
-                                {"  "}
                                 {data?.stats?.strengths}
                             </p>
                         </div>
                         <div className="ProfileDetails">
                             <Person data={data} />
-
                             <Experiences data={data} />
                         </div>
                         <div className="showMoreButton"></div>
