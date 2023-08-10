@@ -1,5 +1,9 @@
  /* filename: Person.css */
-.person {
+:root {
+    --title-color: #CDDC39;
+}
+
+ .person {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,4 +65,10 @@
 /* Efecto hover para los enlaces */
 .person-links li a:hover {
     background-color: rgba(0, 0, 255, 0.1);
+}
+
+.person h2,
+.person h3 {
+    /* ... other styles ... */
+    color: var(--title-color);
 }

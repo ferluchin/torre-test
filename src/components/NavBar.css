@@ -1,0 +1,92 @@
+/* filename: NavBar.css */
+
+:root {
+    --primary-color: #27292d;
+    --secondary-color: #FFF;
+    --highlight-color: #ffc107;
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    gap: 1rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navBar a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.navBar a:hover {
+    color: var(--highlight-color);
+}
+
+.navBar .flex {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.newUser {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.newUser input {
+    flex: 1;
+    background: none;
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.2rem;
+    height: 3rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.newUser input::placeholder {
+    color: rgba(var(--secondary-color), 0.6);
+}
+
+.newUser input:focus {
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 10px rgba(var(--highlight-color), 0.4);
+    outline: none;
+}
+
+.searchButtons {
+    position: absolute;
+    right: 5%;
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.searchButtons .cursor {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.searchButtons .cursor:hover {
+    color: var(--highlight-color);
+}
+
+.cursor {
+    cursor: pointer;
+}

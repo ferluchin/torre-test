@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import Experiences from "./Experiences";
 import Person from "./Person";
+import NavBar from "./NavBar";
 
 import "./UserProfile.css";
 
@@ -24,7 +25,10 @@ const UserProfile = () => {
     }, []);
 
     return (
+        
         <div className="userProfile">
+            <NavBar setLoading={setLoading} />
+
             {loading ? (
                 "Loading..."
             ) : (
