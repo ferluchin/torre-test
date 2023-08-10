@@ -51,7 +51,7 @@ Upon running `npm start`, the application should open in your default web browse
 
 ## Live Version
 
-You can access the live version of the application deployed on Netlify [here](NETLIFY_LINK_PLACEHOLDER).
+You can access the live version of the application deployed on Netlify [here](https://torre-test3.netlify.app/).
 
 ## Deliverables
 
