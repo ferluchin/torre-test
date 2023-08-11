@@ -8,10 +8,8 @@
 
 .userProfileContainer {
     background-color: var(--bg-dark);
-    /* El color de fondo deseado */
     display: flex;
     justify-content: center;
-    /* Esto centrará el .userProfile dentro */
     height: 100vh;
     overflow: auto;
     width: 100%;
@@ -28,7 +26,6 @@
 @media only screen and (min-width: 768px) {
     .userProfile {
         max-width: 1200px;
-        /* Ajusta esto si necesitas un ancho diferente */
     }
 }
 
@@ -88,7 +85,6 @@
 /* For larger screens */
 @media only screen and (min-width: 768px) {
     .userProfile {
-        /* max-width: 1200px; */
         flex-direction: row;
         gap: 2rem;
     }

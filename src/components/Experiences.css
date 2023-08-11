@@ -140,7 +140,6 @@ body {
 @media only screen and (min-width: 768px) {
     .experiences {
         flex-direction: row;
-        /* Las secciones se alinean horizontalmente en pantallas más grandes */
         justify-content: space-between;
     }
 
@@ -154,6 +153,5 @@ body {
 @media only screen and (min-width: 1024px) {
     .experience {
         flex: 0 0 calc(100% - 1rem);
-        /* Las tarjetas ocupan el 100% del ancho de su contenedor en pantallas grandes */
     }
 }
