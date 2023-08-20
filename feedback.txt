@@ -1,0 +1,22 @@
+Here's some feedback: 
+
+UX
+- While typing a username in to the search input, the request is made automatically; however, as it loads the profile info, it causes a jumpy experience while loading intermediate genomes that match incomplete usernames. 
+- The UI doesn't handle non existing profiles/usernames, even if the API request returns a 404 error. 
+- Experience titles look clickable, but they are not. 
+- Some company logos (experiences/education sections) appeared squeezed depending on the length of the title. 
+- Titles seem to be center-aligned while other content is left-aligned (standard and most appreciated by the average user)
+- On mobile, the input field and stats row get cut. 
+- Skill chips seem clickable, but they lead nowhere. 
+Code
+- Could have removed default assets that aren't needed for the project. 
+- URLs and hard-coded strings could have been added as environment variables. 
+- Styles/css could improve a lot. Also, they don't follow any particular convention and the project doesn't include preprocessors by default. Some files are even empty. 
+- Also regarding styles, there are some inconsistencies in the usage of variables. 
+- Comments are in Spanish for no reason. In facts, some comments are redundant and unnecessary. 
+- The logic for mapping and rendering experiences can be simplified and optimized. 
+- No particular reason for using emojis instead of icons from the FontAwesomeIcon package already in place. 
+- There are a lot of nested conditions that make the code: 1) error-prone, 2) difficult to read, 3) poor in scalability. 
+- There could be a more granular componentization, so reusability increases. 
+- No tests were included (optional)
+- No back-end was included (required).
